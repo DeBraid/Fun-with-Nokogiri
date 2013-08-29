@@ -1,11 +1,7 @@
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
-# key lies below
 
-def tickers # need a list of stock tickers
-
-end
 
 def grab_ticker(headline)
   i = headline.chomp('-TSX)')
@@ -29,7 +25,7 @@ File.open('etflist.html', 'w') do |f| # f is rep the file with File.open
   f.puts("<title>Intro to HTML</title>")
   f.puts("</head>")
   f.puts("<body>")
-  f.puts("<h1> List of ETF's in Canada</h1>")
+  f.puts("<h1> List of ETF's in Canada with Charts</h1>")
   f.puts("<ul>")
 
   etfs.each do |etf|
